@@ -1,8 +1,5 @@
 Inicio do Projeto 
 
-Adislan Fernandes
-
-
  Adislan
 
  Andre
