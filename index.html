@@ -1,75 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site 1</title>
+    <title>Contato - Meu Site</title>
     <style>
-        body{
-            background-color: rgb(156, 156, 156);
-        }
-        .container{
-            background-color: aqua;
-            text-align: center;
-
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-        ul{
-            list-style-type: none;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
+        /* Estilos CSS simples para o formulário */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
-        .conteudo {
-            background-color: #f4f4f4;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
+        .container {
+            background-color: #fff;
+            padding: 30px;
             border-radius: 8px;
-            height: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
         }
-        
-
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 22px); /* Ajusta a largura considerando o padding */
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total */
+        }
+        textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
+            min-height: 120px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Servicço</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
     <div class="container">
-        <div class="conteudo">
-            <h1>Conteudo</h1>
-        </div>
-        
+        <h1>Entre em Contato</h1>
+        <form action="processa_contato.php" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
 
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="assunto">Assunto (opcional):</label>
+                <input type="text" id="assunto" name="assunto">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+
+ <div class="terms">
+          <input type="checkbox" required> I accept the <a href="#">Terms of Service</a>
+        </div>
+
+
+            <input type="submit" value="Enviar">
+        </form>
     </div>
 </body>
 </html>
