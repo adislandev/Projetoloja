@@ -1,5 +1,4 @@
 Inicio do Projeto 
-<<<<<<< cristiandev
  Adislan
 
  Andre
@@ -17,7 +16,3 @@ Ciclano
 cristiandev
 
 
-=======
-Adislan Fernandes
-henrique
->>>>>>> teste
