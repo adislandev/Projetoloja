@@ -140,18 +140,19 @@
 
     /* Login */
     .login-box {
-      background: rgba(0, 255, 255, 0.61);
+      background: rgb(232, 228, 228);
       width: 300px;
       padding: 40px;
       margin: 20px auto;
       border-radius: 15px;
       box-shadow: rgba(0,0,0,0.664) 0px 22px 70px 4px;
-      text-align: center;
+      text-align: left;
     }
 
     .login-box h2 {
-      color: rgba(0, 0, 255, 0.8);
+      color: rgba(49, 49, 208, 0.8);
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .login-box input {
@@ -161,6 +162,11 @@
       margin: 10px 0;
       border: 1px solid white;
       border-radius: 22px;
+    }
+
+    .login-box a {
+      text-decoration: none;
+
     }
 
     .btn-login {
@@ -196,8 +202,9 @@
 
       .login-box {
         width: 90%;
-      }
+        }
     }
+    
   </style>
 </head>
 
@@ -247,18 +254,19 @@
       <div class="login-box">
         <h2>Login</h2>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail">
+        <label for="email"></label>
+        <input type="email" id="email" placeholder="Digite seu E-mail">
 
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="Digite sua senha">
+        <label for="senha"></label>
+        <input type="password" id="senha" placeholder="Digite sua Senha">
 
         <button class="btn-login">Entrar</button>
 
         <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login" class="login-img">
 
         <label for="criar conta"></label>
-        <p class="criatv">Nãotem conta? <a href="#">Criar conta</a></p>
+        <p>Não tem conta? <a href="#">Criar conta</a></p>
+
       </div>
     </section>
 
