@@ -7,6 +7,7 @@
 
   <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <style>
     /* Reset */
@@ -140,19 +141,18 @@
 
     /* Login */
     .login-box {
-      background: rgb(232, 228, 228);
+      background: rgba(0, 255, 255, 0.61);
       width: 300px;
       padding: 40px;
       margin: 20px auto;
       border-radius: 15px;
       box-shadow: rgba(0,0,0,0.664) 0px 22px 70px 4px;
-      text-align: left;
+      text-align: center;
     }
 
     .login-box h2 {
-      color: rgba(49, 49, 208, 0.8);
+      color: rgba(0, 0, 255, 0.8);
       margin-bottom: 20px;
-      text-align: center;
     }
 
     .login-box input {
@@ -162,11 +162,6 @@
       margin: 10px 0;
       border: 1px solid white;
       border-radius: 22px;
-    }
-
-    .login-box a {
-      text-decoration: none;
-
     }
 
     .btn-login {
@@ -202,9 +197,76 @@
 
       .login-box {
         width: 90%;
-        }
+      }
     }
+
+.produto{
+background-color:rgb(45, 14, 70) ;
+border-radius:8px ;
+width: 290px;
+padding:25px ;
+box-shadow:0 2px 8px rgb(156, 156, 156) ;
+text-align: center;
+color: rgb(122, 6, 6);
+display: grid;
+text-align: center;
+margin: 0px ;
+gap: 5px;
+
+}
+
+.produto h2{
+   font-size: 22px;
+    margin: 10px 0 8px;  ;
+}
+.produto p {
+    margin: 8px 0; ;
+    color:rgb(235, 233, 233) ;
+}
+
+.produto .preco{
+    font: size 20px; ;
+    color:rgb(255, 255, 255) ;
+    font-weight:bold ;
+}
+.produto button{
+    margin-top: 12px;
+    padding:10px 20px ;
+    background-color:rgb(207, 207, 207) ;
+    color:rgb(0, 0, 0) ;
+    border:none ;
+    border-radius:4px ;
+    cursor: pointer;
+}
+.produto img{
+    width: 200px;
+    height: auto;
+    border-radius: 30px;
+   
+}
+ .produtos{ 
+  display: grid;
+  grid-template-columns: repeat(3,280px); 
+  gap: 20px; 
+  justify-content:center; 
+   flex-wrap: wrap;
+  max-width: 920px; 
+  margin:0 auto ; 
+  text-align: center;
+  padding: 60px;
+  width: 50px;
+  
+ }
+  .carrinhoi{
+    background-color:transparent;
+    width: 40px;
+    color: rgb(207, 207, 207) ;
+    cursor: pointer;
+  }
     
+ 
+  
+   
   </style>
 </head>
 
@@ -223,13 +285,132 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="produto1">
 
     <!-- HOME -->
     <section id="home" class="active">
-      <h1>Bem-vindo ao Projeto Piloto</h1>
-      <p>Este é um site modelo, criado com HTML, CSS e JavaScript puro.</p>
-    </section>
+   
+ <section class="produtos">
+
+<div class="produto">
+  <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+   <img src="https://b2bleonorashop.vtexassets.com/arquivos/ids/161285/mouse-gamer-rgb-7-botoes-7200-dpis-letron-74315--1.png?v=638067308343670000" alt="" srcset="">
+    <h2>Mouse gamer rgb</h2>
+    <p>Usb 3200dpi Led Rgb Com Fio JX-M20</p> 
+    <p class="preco">R$ 129,90 </p> 
+   <a href="https://www.rymo.com.br/mouse-gamer-rgb-black-7200dpi-7-botoes-19948-1" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+
+<div class="produto">
+  <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://cdn.awsli.com.br/2500x2500/1318/1318167/produto/234998812/k628rgb-b-pt--1--hpknx81vyn.png" alt="" srcset="">
+<h2>Teclado Gamer Mecânico Pollux RGB</h2>
+<p> Preto, ABNT2, Switch Marrom, K628-RGB-B, REDRAGON</p>
+<p class="preco">R$199,90</p>
+<a href="https://www.redragon.store/teclado-mecanico-gamer-pollux-rgb-preto" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto">
+  <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://imgs.casasbahia.com.br/1564069528/1xg.jpg" alt="" srcset="">
+<h2>Headset Gamer Bright RGB</h2>
+<p>7.1, USB, Microfone com LED, Preto </p>
+<p class="preco">R$144,99</p>
+<a href="https://www.bright.com.br/produtos/audio-video/headsets-headphones/210-headset-gamer-7-1-usb-592" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+ <div class="produto"> 
+      <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://lojabelinformatica.com.br/wp-content/uploads/2025/05/Gabinete-Gamer-Aqu-rio-Gb1796-Com-4-Cooler-Fan-LED-RGB-Hayom_1746198667.webp" alt="" srcset="">
+<h2>Computador Gamer - Intel Core i5-12400F, 16GB 3200Mhz RGB</h2>
+<p>Placa de Vídeo RTX 4060 8GB, Fonte 600W, Gabinete Aquario</p>
+<p class="preco">R$5.545,06</p>
+<a href="https://www.kabum.com.br/produto/661620/pc-gamer-skill-aquarium-intel-core-i5-12400f-16gb-3200mhz-geforce-gtx-1660-ti-6gb-ssd-1tb-m-2-fonte-600w-80-plus-preto-ska041" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto"> 
+      <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://images.kabum.com.br/produtos/fotos/sync_mirakl/217261/xlarge/Placa-de-V-deo-Zotac-NVIDIA-GeForce-RTX-3060-Twin-Edge-12GB-GDDR6-ZT-A30600E-10M_1746645044.png" alt="" srcset="">
+<h2>Placa de Vídeo Nvidia RTX 3060</h2>
+<p>MSI NVIDIA GeForce RTX 3060 VENTUS 2X OC, LHR, 12GB GDDR6</p>
+<p class="preco">R$2.499,90</p>
+<a href="https://www.zoom.com.br/placa-de-video/placa-de-video-geforce-rtx-3060-12gb-gddr6-msi-ventus-2x-oc-ray-tracing?_lc=88&searchterm=placa%2Bde%2Bvideo%2Brtx%2B3060" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto"> 
+  <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://shopinfo.vteximg.com.br/arquivos/ids/1319752-400-400/1.png?v=637807307108170000" alt="" srcset="">
+<h2>Cadeira Gamer Fox Racer até 130kgs com RGB</h2>
+<p>Iluminação LED com almofadas Reclinável Preta</p>
+<p class="preco">R$120,000</p>
+<a href="https://www.escorregaopreco.com.br/ofertas/shopinfo/1220827" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto"> 
+      <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://cdn.awsli.com.br/1882/1882647/produto/265777804/dominator_plat_rgb_02-q1lfaz4amc.jpg" alt="" srcset="">
+<h2>Memória Ddr4 Corsair Dominator</h2>
+<p> RGB, 32GB (2x16GB), 3200MHz, DDR4, CL16, Preto - CMT32GX4M2C3200C16</p>
+<p class="preco">R$ 1.799,99</p>
+<a href="https://www.kabum.com.br/produto/526359/memoria-ram-corsair-dominator-platinum-rgb-32gb-2x16gb-3200mhz-ddr4-cl16-preto-cmt32gx4m2c3200c16?srsltid=AfmBOopdWw3xd6i9JsqD82KIp2XCrbl9icreOMtVHv6Rd7ue5k_r7ELwlHU" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto"> 
+  <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>    
+<img src="https://img.terabyteshop.com.br/archive/1187326738/10794-ssd-wd-1tb-WDS100T2G0A-01.png" alt="" srcset="">
+<h2>SSD WD Green, 480GB, SATA III, 2.5</h2>
+<p>Leitura: 545MB/s, Gravação: 430MB/s, Preto - WDS480G3G0A</p>
+<p class="preco">R$ 249,99</p>
+<a href="https://www.kabum.com.br/produto/338408/ssd-wd-green-480gb-sata-iii-2-5-leitura-545mb-s-gravacao-430mb-s-preto-wds480g3g0a" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+
+<div class="produto"> 
+    <div class="carrinhoi"> <a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>  
+<img src="https://images.tcdn.com.br/img/img_prod/237837/processador_amd_ryzen_5_4500_cache_11mb_3_6ghz_4_1ghz_max_turbo_am4_sem_video_100_100000644box_50555_1_2fab841712d91929cceeb29732fe79ec.png" alt="" srcset="">
+<h2>Processador AMD Ryzen 5 4500 3.6GHz </h2>
+<p>(4.1GHz Max Turbo) Cache 11MB, AM4, Sem Vídeo - 100-100000644BOX</p>
+<p class="preco">R$ 449.99</p>
+<a href="https://www.kabum.com.br/produto/333154/processador-amd-ryzen-5-4500-3-6ghz-4-1ghz-max-turbo-cache-11mb-am4-sem-video-100-100000644box" target="_blank" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    <i class="bi bi-cart-plus-fill" style="margin-right: 8px;"></i>Comprar
+  </button>
+</a>
+</div>
+</section>   
+
 
     <!-- SOBRE -->
     <section id="sobre">
@@ -254,19 +435,15 @@
       <div class="login-box">
         <h2>Login</h2>
 
-        <label for="email"></label>
-        <input type="email" id="email" placeholder="Digite seu E-mail">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
 
-        <label for="senha"></label>
-        <input type="password" id="senha" placeholder="Digite sua Senha">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
 
         <button class="btn-login">Entrar</button>
 
         <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login" class="login-img">
-
-        <label for="criar conta"></label>
-        <p>Não tem conta? <a href="#">Criar conta</a></p>
-
       </div>
     </section>
 
