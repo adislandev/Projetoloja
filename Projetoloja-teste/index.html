@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Piloto</title>
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #222;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    /* Conteúdo Geral */
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 30px;
+      font-size: 0.9em;
+      position: relative;
+      overflow: hidden;
+      animation: aparecer 1s ease forwards;
+      opacity: 0;
+    }
+
+    .linha-animada {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #00f, #0f0, #f00, #00f);
+      animation: linhaAnimada 4s linear infinite;
+    }
+
+    @keyframes linhaAnimada {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: -100%; }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      font-size: 1.5em;
+      transition: color 0.3s, transform 0.3s, background-color 0.3s;
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #555;
+      transform: scale(1.3) rotate(10deg);
+      box-shadow: 0 0 10px #fff;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* Login */
+    .login-box {
+      background: rgba(0, 255, 255, 0.61);
+      width: 300px;
+      padding: 40px;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: rgba(0,0,0,0.664) 0px 22px 70px 4px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: rgba(0, 0, 255, 0.8);
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid white;
+      border-radius: 22px;
+    }
+
+    .btn-login {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 22px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #555;
+    }
+
+    .login-img {
+      margin-top: 20px;
+      width: 100px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      .login-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Projeto Piloto</h1>
+    <nav>
+      <ul>
+        <li><a onclick="mostrarTela('home')">Home</a></li>
+        <li><a onclick="mostrarTela('sobre')">Sobre</a></li>
+        <li><a onclick="mostrarTela('servicos')">Serviços</a></li>
+        <li><a onclick="mostrarTela('contato')">Contato</a></li>
+        <li><a onclick="mostrarTela('login')">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- HOME -->
+    <section id="home" class="active">
+      <h1>Bem-vindo ao Projeto Piloto</h1>
+      <p>Este é um site modelo, criado com HTML, CSS e JavaScript puro.</p>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <h1>Sobre Nós</h1>
+      <p>Somos uma empresa inovadora focada em criar soluções digitais de qualidade.</p>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+      <h1>Nossos Serviços</h1>
+      <p>Oferecemos desenvolvimento de sites, sistemas web e consultoria tecnológica.</p>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h1>Fale Conosco</h1>
+      <p>Entre em contato pelo e-mail: contato@projetopiloto.com.br</p>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login">
+      <div class="login-box">
+        <h2>Login</h2>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
+
+        <button class="btn-login">Entrar</button>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Login" class="login-img">
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="linha-animada"></div>
+    <p id="digita"></p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const texto = "© 2025 Projeto Piloto. Todos os direitos reservados. | Política de Privacidade";
+    let i = 0;
+
+    function digita() {
+      if (i < texto.length) {
+        document.getElementById("digita").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digita, 50);
+      }
+    }
+
+    window.onload = digita;
+
+    function mostrarTela(tela) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(tela).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
