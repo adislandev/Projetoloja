@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .login-container {
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 6px 36px rgba(255,65,108,0.15), 0 1.5px 8px rgba(255,75,43,0.10);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 370px;
+      animation: fadeIn 0.8s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .login-container h1 {
+      color: #ff416c;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .form-label {
+      color: #ff416c;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+    .form-control {
+      border-radius: 0.7rem;
+      border: 2px solid #ffe0ec;
+      background: #fff7fa;
+      padding: 0.75rem 1rem;
+      font-size: 1.05rem;
+      color: #333;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-control:focus {
+      border-color: #ff416c;
+      box-shadow: 0 0 0 0.2rem rgba(255,65,108,.12);
+      background: #fff;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #27ae60 0%, #2ecc40 100%);
+      border: none;
+      border-radius: 0.7rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.7rem 0;
+      width: 60%;
+      box-shadow: 0 2px 8px rgba(39,174,96,0.10);
+      transition: background 0.2s, transform 0.1s;
+      display: block;
+      margin: 1.2rem auto 0 auto;
+      color: #fff;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: linear-gradient(90deg, #2ecc40 0%, #27ae60 100%);
+      transform: translateY(-2px) scale(1.02);
+      color: #fff;
+    }
+    .form-control::placeholder {
+      color: #ff416c99;
+      opacity: 1;
+      font-weight: 400;
+    }
+    .form-text {
+      color: #ff4b2b;
+      font-size: 0.95rem;
+      margin-top: -0.7rem;
+      margin-bottom: 1rem;
+      display: block;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    
+    <h1>Login</h1>
+    <form> <!-- Removido o atributo action -->
+      <div class="form-group">
+        <label for="username">Nome:</label>
+        <input type="email" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+    const supabaseUrl = 'https://npnbuouwqjvhranzajah.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wbmJ1b3V3cWp2aHJhbnphamFoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTI4MzEzOSwiZXhwIjoyMDY2ODU5MTM5fQ.DG_M_mNpSvzG-p5IJzweNNyNsAByTeA8Pn2731aK0oo ';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    document.querySelector('form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const email = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      try {
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+
+        if (error) {
+          alert('Erro ao fazer login: ' + error.message);
+        } else {
+          alert('Login realizado com sucesso!');
+          window.location.href = '/crud.html';
+        }
+      } catch (err) {
+        console.error('Erro inesperado:', err);
+        alert('Ocorreu um erro inesperado.');
+      }
+    });
+  </script>
+</body>
+
+</html>
